@@ -2,13 +2,17 @@
 
 ### Estimated Duration: 4 Hours 
 
-## Overview
+## 📖 Overview
 
-In this lab, you will work on a scenario where **Contoso Ltd**. is modernizing its legacy Java application to improve scalability and cloud readiness. The application currently runs on outdated frameworks, making it difficult to manage and scale.
+In this lab, you will modernize **Contoso Ltd.'s** Asset Manager application using **GitHub Copilot App Modernization**. The application currently runs on legacy Java technologies and depends on multiple infrastructure components that are not optimized for modern cloud environments.
 
-Using the GitHub Copilot App Modernization extension, you will assess the application, upgrade its runtime and frameworks, migrate components to Azure services, containerize it, and deploy it to a cloud-native environment. This demonstrates an end-to-end modernization workflow.
+Using GitHub Copilot App Modernization, you will perform a **complete end-to-end modernization journey**. You will begin by assessing the application to understand its current architecture, dependencies, and migration readiness. Based on the assessment recommendations, you will upgrade application frameworks, migrate supporting services to Azure-native alternatives, and implement operational improvements required for cloud deployment.
 
-## Lab Objectives
+Throughout the lab, **GitHub Copilot** will assist with planning, code generation, infrastructure provisioning, configuration updates, and deployment activities. The modernization process includes migrating the PostgreSQL database to Azure Database for PostgreSQL Flexible Server, replacing AWS S3 with Azure Blob Storage, replacing RabbitMQ with Azure Service Bus, enabling application health monitoring through Spring Boot Actuator, containerizing application components, and deploying the final solution to Azure Kubernetes Service (AKS).
+
+By the end of the lab, the Asset Manager application will be transformed into a modern, containerized, cloud-native solution running on Azure infrastructure.
+
+## 🎯 Objectives
 
 You will be able to complete the following tasks:
 - Task 1: Assess Your Java Application
@@ -34,7 +38,7 @@ In this task, you will run and explore the sample Java application and use the G
 
 1. On the **Welcome to Docker** page, click **Skip**.
 
-   ![](images/gc27.png)
+   ![](images/T1S3-0106.png)
    
 1. On the **Welcome Survey** page, click **Skip**.
 
@@ -68,9 +72,9 @@ In this task, you will run and explore the sample Java application and use the G
 
       ![](images/11.png)
 
-2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
+2. On the **LabVM**, click **Start (1)** at the bottom of the screen and select **File Explorer (2)** from the menu.
 
-   ![](images/24.png)
+   ![](images/T1S7-0106.png)
 
 1. In **File Explorer**, navigate to: `C:\LabFiles\java-migration-copilot-samples\asset-manager`
 
@@ -80,7 +84,7 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/26.png)
 
-1. In the Command Prompt window, type the following command and press **Enter**:
+1. This will open a Command Prompt window. In the Command Prompt window, type the following command and press **Enter**:
 
    ```
    scripts\startapp.cmd
@@ -88,39 +92,78 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/27.png)
 
-1. This will **use the local file system instead of S3 to store images** and **launch RabbitMQ and PostgreSQL using Docker**.
-   Copy the **web application URL**, **RabbitMQ Management URL**, along with the **username** and **password**, and note them down.
+1. This will **use the local file system instead of S3 to store images** and **launch RabbitMQ and PostgreSQL using Docker**. 
+
+1. Copy the **web application URL**, **RabbitMQ Management URL**, along with the **username** and **password**, and note them down.
 
    ![](images/29.png)
 
    > **Note:** If two Windows prompts appear, minimize them and let them run in the background. **Do NOT interrupt** the process.
 
-   ![](images/30.png)
+   > ![](images/30.png)
 
-   > **Note:** If you encounter any errors in the terminal, repeat steps 11 and 12.
+   > **Note:** If you encounter any errors in the terminal, repeat steps to run the application again.
 
-    ![](images/new/c3.png)
+   > ![](images/new/c3.png)
 
 1. In the Edge browser, open a new tab and enter **[http://localhost:8080](http://localhost:8080)**. You will be navigated to the **AWS S3 Asset Manager** web page.
 
    ![](images/31.png)
 
-1. In a new tab, enter **[http://localhost:15672](http://localhost:15672) (1)**.
-   Sign in using the credentials:
+1. In a new browser tab, enter the following **URL (1)** and sign in using the credentials:
 
-   * **Username:** guest **(2)**
-   * **Password:** guest **(3)**
-     Then click **Login (4)**.
+   ```
+   http://localhost:15672
+   ```
 
-   ![](images/32.png)
+   - **Username:** guest **(2)**
+   - **Password:** guest **(3)**
+   - Click on **Login (4)**.
+
+      ![](images/32.png)
 
 1. You will be navigated to the **RabbitMQ Management** web page.
 
    ![](images/33.png)
 
-1. Double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
+1. From the **Lab VM** desktop, double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
 
    ![](images/5.png)
+
+1. On the **Welcome to VS Code** page, click on **Continue with GitHub**. 
+
+   ![](images/T1S17-0106.png)
+
+1. Enter the following details to sign in:
+
+   - Username: **odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs (1)**
+   - Click on **Sign in with your identity provider (2)**.
+
+      ![](images/T1S18-0106.png)
+
+1. On the Single sign-on to CLoudLabs Organizations select **Continue**.
+
+   ![](images/T1S19-0106.png)
+
+1. On the Permissions requested window, click on **Accept**.
+
+   ![](images/T1S20-0106.png)
+
+1. On the Authorize Visual Studio Code page, click on **Continue** to select the account to authorize.
+
+   ![](images/T1S21-0106.png)
+
+1. Click on Authorize Visual Studio Code.
+
+   ![](images/T1S22-0106.png)
+
+1. When prompted, click **Open** to allow vscode.dev to launch the project in **Visual Studio Code**.
+
+   ![](images/new/4.png)
+
+1. On VS Code, close the Make it yours page by clicking on the **X** icon.
+
+   ![](images/T1S24-0106.png)
 
 1. Click on **Explorer (1)** and select **Open Folder (2)** from the options.
 
@@ -130,57 +173,21 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/4.png)
 
-   > **Note:** If a pop-up comes for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
+1. On the pop-up window for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
 
     ![](images/8.png)
-
-1. In **Visual Studio Code**, click the **GitHub Copilot icon 🤖**.
-
-    ![](images/gc25.png)
-    
-1. Select **Use AI Features**.
-
-    ![](images/new/1.png)
-
-1. In the **Sign in to use AI Features** tab, click **Continue with GitHub**.
-
-    ![](images/new/2.png)
-
-1. On the **Sign in to GitHub** tab, you will see the login screen. In that screen, enter the following **email: odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs**. Then click on **Sign in with your identity provider** **(2)**. 
-   
-   ![](images/new/3.png)
-          
-1. Next, On the **Single sign-on to CLoudLabs Organizations** select **Continue**.
-
-   ![](images/continue.png)
-
-1. On the **Pick an account** page, select **odl_User<inject key="DeploymentID" enableCopy="false"/>**.
-   
-    ![](images/githubpage.png)
-
-1. On the **Select user to authorize Visual Studio Code** page, click on **Authorize Visual-Studio-Code**.
-
-   ![](images/3.png)
-
-1. If prompted, click **Open** to allow vscode.dev to launch the project in **Visual Studio Code**.
-
-   ![](images/new/4.png)
 
 1. Click on the **Extensions (1)** button on the left-hand banner, search for **GitHub Copilot modernization (2)** and **Install (3)** the extension.
 
     ![](images/gc23.png)
 
-1. In **GitHub Copilot Chat**, click the **model selector** located below the prompt text box.
+1. In **GitHub Copilot Chat**, click the **model selector (1)** located below the prompt text box and select **Claude Sonnet 4.6 (2)** from the dropdown menu.
 
-   ![](images/new/5.png)
-
-1. Select the **Claude Sonnet 4.6** model from the available options to continue using it for your prompts.
-
-   ![](images/new/6.png)
+   ![](images/T1S29-0106.png)
 
 1. Open the **GitHub Copilot modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Start Assessment (2)** button to start the app assessment.
 
-   ![](images/gc24.png)
+   ![](images/T1S30-0106.png)
 
 1. On the Assessment Reports screen, select **Recommended Assessment** to proceed with the default evaluation setup.
 
@@ -190,11 +197,13 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/new/8.png)
 
-1. Please wait until the assessment is completed and the report is generated.
+1. Please wait until the assessment is completed and the report is generated. Once generated, it will automatically open in a new tab.
    
+   > **Note:** The report generation may take about 5 minutes.
+
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
-   ![](images/new/9.png)
+   ![](images/T1S34-0106.png)
 
 In this task, you have successfully analyzed the existing Java application using GitHub Copilot App Modernization to identify framework versions, code issues, migration blockers, and readiness for modernization and cloud migration.   
 
@@ -204,17 +213,23 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    >**Note** : This lab uses **Java 25**, which is already up to date. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
 
-1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Legacy Java Version**.
+1. From the **Github Copilot modernization (1)** from the left side, select **Upgrade Java Runtime & Frameworks (2)**. This will open the Copilot Chat panel with a predefined prompt to upgrade the Java runtime and frameworks **(3)**.
 
-    ![Java Upgrade](images/new/c7.png)
+    ![Java Upgrade](images/new/T2S1-0106.png)
 
-1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
+    ![Java Upgrade](images/new/T2S1a-0106.png)
+
+1. If prompted to choose the Java or Springboot versions to upgrade to, select the latest versions available.
+
+   ![](images/new/T2S2-0106.png)
+
+1. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent whenever they appear.
 
    >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
 
    ![](images/new/c8.png)
 
-   1. If prompted, click **Allow** to grant the required permissions.
+1. If prompted, click **Allow** to grant the required permissions.
 
 1. In the Visual Studio Code prompt, click **Allow** to sign in with GitHub.
 
@@ -226,7 +241,7 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    >**Note** : Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
 
-   ![](images/new/c9.png)
+   > ![](images/new/c9.png)
 
    >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
