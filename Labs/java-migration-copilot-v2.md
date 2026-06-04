@@ -103,11 +103,11 @@ In this task, you will run and explore the sample Java application and use the G
 
    > ![](images/30.png)
 
-   > **Note:** If you encounter any errors in the terminal, repeat steps to run the application again.
+   > **Note:** If you encounter any errors in the terminal, repeat the steps to run the application again.
 
    > ![](images/new/c3.png)
 
-1. Minimize all the commond prompt window and let them run.
+1. Minimize all the command prompt windows and let them run.
 
 1. In the Edge browser, open a new tab and enter **[http://localhost:8080](http://localhost:8080)**. You will be navigated to the **AWS S3 Asset Manager** web page.
 
@@ -144,7 +144,7 @@ In this task, you will run and explore the sample Java application and use the G
 
       ![](images/T1S18-0106.png)
 
-1. On the Single sign-on to CLoudLabs Organizations select **Continue**.
+1. On the Single Sign-On to CloudLabs Organizations, select **Continue**.
 
    ![](images/T1S19-0106.png)
 
@@ -164,7 +164,7 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/new/4.png)
 
-1. On VS Code, close the Make it yours page by clicking on the **X** icon.
+1. In VS Code, close the Make it yours page by clicking on the **X** icon.
 
    ![](images/T1S24-0106.png)
 
@@ -214,7 +214,7 @@ In this task, you have successfully analyzed the existing Java application using
 
 In this task, you will use predefined Copilot tasks to automatically upgrade the project’s Java runtime version and frameworks such as Spring/Spring Boot. Copilot will analyze the application, apply necessary version updates, recommend fixes, and commit changes in a new branch.
 
-   >**Note** : This task is optional as in this lab we are already using JDK 25, latest version of Java. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
+   >**Note**: This task is optional, as in this lab, we are already using JDK 25, the latest version of Java. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
 
 1. From the **Github Copilot modernization (1)** from the left side, select **Upgrade Java Runtime & Frameworks (2)**. This will open the Copilot Chat panel with a predefined prompt to upgrade the Java runtime and frameworks **(3)**.
 
@@ -226,7 +226,7 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    ![](images/new/T2S2-0106.png)
 
-   > **Note:** Copilot sometimes may prompt to ask to Genrate test, please select Skipt tes, as it is not required for this lab.
+   > **Note:** Copilot may sometimes prompt to ask to generate a test. Please select Skip test, as it is not required for this lab.
 
 1. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent whenever they appear.
 
@@ -244,13 +244,13 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    ![Confirm Solution](images/new/a3.png)
 
-   >**Note** : Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
+   >**Note**: Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
 
    > ![](images/new/c9.png)
 
-   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
+   >**Note**: Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
-   > **Note:** Click on Keep, to save the changes Copilot made to the files.
+   > **Note:** Click on Keep to save the changes Copilot made to the files.
 
 In this task, you have successfully upgraded the Java runtime and Spring/Spring Boot frameworks using predefined Copilot tasks to ensure the application is secure, modern, and cloud-ready.   
 
@@ -277,9 +277,9 @@ In this task, you will use GitHub Copilot to generate a comprehensive modernizat
 
     ![](images/T3S3-0106.png)
 
-   > **Note:** Click on Keep, to save the changes Copilot made to the files.   
+   > **Note:** Click on Keep to save the changes Copilot made to the files.   
 
-1. The `plan.md` file will open in VS Code, review the plan Copilot created, then proceed with next task. 
+1. The `plan.md` file will open in VS Code, review the plan Copilot created, then proceed with the next task. 
 
 In this task, you have successfully generated a comprehensive modernization plan using GitHub Copilot based on the assessment report. You have reviewed the proposed changes and are now prepared to execute the modernization tasks in the subsequent task.
 
@@ -310,11 +310,11 @@ The agent will analyze the approved modernization plan and apply the required ch
 
     ![](images/new/T4S1-0106.png)
 
-    > **Note:** When prompted click on **Allow** to let the agent run and implement the modernization tasks. This process may take approximately 30–40 minutes to complete.
+    > **Note:** When prompted, click on **Allow** to let the agent run and implement the modernization tasks. This process may take approximately 30–40 minutes to complete.
 
     > **Note:** Do not interrupt while provisioning scripts, migration scripts, or code transformation tasks are running.
 
-1. Note in the above prompt we have specifically asked the agent to **not provision infrastructure or deploy the application yet**, as we want to focus on code changes and framework upgrades in this step, and the infrastructure provisioning and deployment will be covered in the next tasks.    
+1. Note in the above prompt, we have specifically asked the agent to **not provision infrastructure or deploy the application yet**, as we want to focus on code changes and framework upgrades in this step, and the infrastructure provisioning and deployment will be covered in the next tasks.    
 
 1. During execution, GitHub Copilot **may** generate or update the following files:
 
@@ -357,16 +357,16 @@ GitHub Copilot will use a custom task and reference documentation to analyze the
 
    > ![](images/new/c6.png)
 
-1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the **prompt (1)** then click on **send (2)**.
+1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the **prompt (1)**, then click on **send (2)**.
 
    ```
-   Resource link : https://docs.spring.io/spring-boot/reference/actuator/endpoints.html
+   Resource link: https://docs.spring.io/spring-boot/reference/actuator/endpoints.html
    ```
    ![](images/new/T5S4-0106.png)
    
 1. Review the proposed code changes and click **Keep** to apply them.
 
-   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
+   >**Note**: Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have created and executed a custom Copilot task to enable Spring Boot Actuator health endpoints for application monitoring and Azure readiness probes.
 
@@ -393,15 +393,15 @@ GitHub Copilot will analyze the application structure, generate a containerizati
 
 1. View the plan and collaborate with Copilot Agent as it follows the **Execution Steps** in the plan by clicking **Continue**/**Allow** in pop-up chat notifications to run commands. Some of the execution steps leverage agentic tools of **Container Assist**.
     
-1. Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click **Keep** to apply the generated code.
+1. Copilot Agent will help generate Dockerfile, build Docker images, and fix build errors if there are any. Click **Keep** to apply the generated code.
 
-   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
+   >**Note**: Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
 
 1. Navigate to the **worker (1)** folder in VS Code and verify that the **Dockerfile (2)** is created.
 
     ![](images/new/T6S6-0506.png)
 
-In this task, the application was containerized using the GitHub Copilot App Modernization Containerization Task, where Copilot generated the containerization-plan.copilotmd, created Dockerfiles for the application modules, and successfully built Docker images with all changes accepted via “Keep”. These Docker artifacts (Dockerfiles and images) are then used as deployment inputs in Task 8, where the application is provisioned and deployed to Azure Kubernetes Service.
+In this task, the application was containerized using the GitHub Copilot App Modernization Containerization Task, where Copilot generated the containerization-plan.copilotmd, created Dockerfiles for the application modules and successfully built Docker images with all changes accepted via “Keep”. These Docker artifacts (Dockerfiles and images) are then used as deployment inputs in Task 8, where the application is provisioned and deployed to Azure Kubernetes Service.
 
 ### Task 7: Deploy to Azure
 
@@ -415,46 +415,45 @@ By the end of this task, the application will be running on Azure Kubernetes Ser
 
     ![Run Deployment task](images/new/T7S1-0506.png)
 
-1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat to **Edit** the last sentence of the prompt to **Hosting service: AKS** **(1)** and click on **Send (2)** button.
+1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat to **Edit** the last sentence of the prompt to **Hosting service: AKS** **(1)** and click on the **Send (2)** button.
 
    ![Deployment progress](images/new/T7S2-0506.png)
 
+1. GitHub Copilot will prompt you to log in to Azure. To log in, follow the steps mentioned below: 
 
-1. Github Copilot will prompt you to login to azure. To login follow the steps mentioned below: 
+   - Click on the link **(1)** that GitHub Copilot shows in the chat, which opens a browser page. 
 
-   - Click on the link **(1)** Github Copilot shows in the chat which opens a browser page. 
+   - On the browser page, copy and paste the Code that Copilot displays in the chat.
 
-   - On the browser page copy and paste the Code that Copilot displays on the chat.
-
-      > **Note:** The code would be different for you and will not be same as the image below.
+      > **Note:** The code would be different for you and will not be the same as the image below.
 
       ![](images/new/azlogin-1-0506.png)
 
-   - After entering the code click on Next and then Continue and navigate back to VS Code.
+   - After entering the code, click on Next and then Continue and navigate back to VS Code.
 
       ![](images/new/azlogin-2-0506.png)
 
-   - In the Github Copilot chat type - **Login complete** and send. 
+   - In the GitHub Copilot chat type - **Login complete** and send. 
 
       ![](images/new/azlogin-3-0506.png)   
 
-   > **Important:** It is possible that Github Copilot might ask you to login in a different way but it will showcase the steps, make sure you follow the steps it shares to login.  
+   > **Important:** GitHub Copilot might ask you to log in in a different way, but it will showcase the steps; make sure you follow the steps it shares to log in.  
 
-1. Once the prompt is executing, click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
+1. Once the prompt is executing, click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for the project, security configurations, and execution steps for deployment.
 
-   > **Note:** If Copilot asks to Execute the plan, click on Execute/Yes as prompted.
+   > **Note:** If Copilot asks to execute the plan, click on Execute/Yes as prompted.
 
 1. If prompted to enter a password for PostgreSQL flexible server, enter any suitable password **(1)** and **submit (2)**. 
 
       ![](images/new/postgre-pass-0506.png)  
 
-1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in **progress.copilotmd**. 
+1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in the terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in **progress.copilotmd**. 
 
    >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
 
-   >**Note** : Please wait while Copilot completes the task, which may take approximately 30–45 minutes.
+   >**Note**: Please wait while Copilot completes the task, which may take approximately 30–45 minutes.
 
-1. Once deployment completed you can view the deployment status as below: 
+1. Once the deployment is completed, you can view the deployment status as below: 
 
    ![Deployment progress](images/new/T7S11-0506.png)
 
@@ -463,18 +462,18 @@ By the end of this task, the application will be running on Azure Kubernetes Ser
    >**Note:** If you face error: **Hmmm… can't reach this page**, terminate the chat and add the below given prompt.
 
    > ```
-   > Migrate the PostgreSQL database to Azure Database for PostgreSQL Flexible Server, and deploy only the web .application to Azure Kubernetes Service (AKS).
+   > Migrate the PostgreSQL database to Azure Database for PostgreSQL Flexible Server, and deploy only the web application to Azure Kubernetes Service (AKS).
    > ```
  
-1. Now we will navigate to Pods and check if they are in running state and try to access the External IP.
+1. Now we will navigate to Pods and check if they are running and try to access the External IP.
 
-   >**Note:** If you encounter any errors copy those errors and paste in Copilot chat. GitHub Copilot should automatically resolve the errors.
+   >**Note:** If you encounter any errors, copy those errors and paste in Copilot chat. GitHub Copilot should automatically resolve the errors.
 
 1. In the Edge browser, navigate to the **Azure portal** and select **Resource Groups**.
 
    ![Deployment progress](images/15.png)
 
-1. On the **Resource Groups** page, select the newly created resource group. The resource group name might be different from the image below as Copilot will create it with its own given name. 
+1. On the **Resource Groups** page, select the newly created resource group. The resource group name might be different from the image below, as Copilot will create it with its own given name. 
 
    ![Deployment progress](images/14.png)
 
@@ -482,7 +481,7 @@ By the end of this task, the application will be running on Azure Kubernetes Ser
 
    ![Deployment progress](images/image1.png)
 
-1. To access the web application, Navigate to the **AKS resource** in the Azure portal.
+1. To access the web application, navigate to the **AKS resource** in the Azure portal.
 
    ![Deployment progress](images/new/c1.png)
 
@@ -494,7 +493,7 @@ By the end of this task, the application will be running on Azure Kubernetes Ser
 
    ![Deployment progress](images/gc31.png)
    
-   >**Note:** If you encounter any errors in accessing the application, copy those errors and paste in Github Copilot chat. GitHub Copilot should automatically resolve the errors.
+   >**Note:** If you encounter any errors in accessing the application, copy those errors and paste them in the GitHub Copilot chat. GitHub Copilot should automatically resolve the errors.
 
 In this task, you have deployed the fully modernized and containerized application to Azure Kubernetes Service (AKS) by provisioning infrastructure, executing deployment scripts, and validating resources in the Azure portal.
 
