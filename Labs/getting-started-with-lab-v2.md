@@ -68,7 +68,7 @@ We've prepared a seamless environment for you to explore and learn about Azure A
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](images/GS-0.png)
+![Access Your VM and Lab Guide](images/guide-0406.png)
 
 ## Virtual Machine & Lab Guide
  
