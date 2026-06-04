@@ -31,13 +31,13 @@ After completing this lab, you will be able to:
 
 ## ⚙️ Pre-requisites
 
-To successfully complete this workshop, you should have the following pre-requisites:
+To complete this workshop, you should have the following prerequisites:
 * Basic understanding of Java application development and architecture.
 * Familiarity with cloud computing concepts and Azure services.
 
 ## 🏗️ Architecture
 
-GitHub Copilot App Modernization serves as the central modernization engine, assessing the application, generating migration plans, upgrading frameworks, refactoring code, provisioning Azure resources, and automating deployment tasks. Throughout the modernization journey, application services are migrated to Azure-native alternatives including Azure Database for PostgreSQL Flexible Server, Azure Blob Storage, and Azure Service Bus.
+GitHub Copilot App Modernization serves as the central modernization engine, assessing the application, generating migration plans, upgrading frameworks, refactoring code, provisioning Azure resources, and automating deployment tasks. Throughout the modernization journey, application services are migrated to Azure-native alternatives, including Azure Database for PostgreSQL Flexible Server, Azure Blob Storage, and Azure Service Bus.
 
 The modernized application is containerized using Docker and deployed to Azure Kubernetes Service (AKS), enabling improved scalability, reliability, security, and operational efficiency. This architecture provides a hands-on experience of how AI-assisted tooling can accelerate enterprise application modernization with minimal manual effort.
 
